@@ -94,6 +94,9 @@ public class TrackData extends LocationData {
             if (mLocationType == null) {
                 throw new IllegalStateException("cannot build TrackData without a path or url");
             }
+            if (mTrackInfo == null) {
+                throw new IllegalStateException("cannot build TrackData without TrackInfo");
+            }
 
             return new TrackData(mLocationType, mLocation, mTrackInfo, mEncryptionData);
         }
